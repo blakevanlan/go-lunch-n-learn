@@ -6,9 +6,7 @@ func fibonacci() func() int {
    pSum, sum := 0, 1
 
    return func() int {
-      tmp := sum
-      sum += pSum
-      pSum = tmp
+      pSum, sum = sum, sum + pSum
       return sum
    }
 }
