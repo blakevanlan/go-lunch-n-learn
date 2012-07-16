@@ -6,20 +6,22 @@ type Vertex struct {
    Lat, Long float64
 }
 
-var m map[string]Vertex
+var m = map[string]Vertex{
+   "Google": Vertex{
+      37.42202, -122.08408,
+   },
+}
 
 func main() {
-   m = make(map[string]Vertex)
-   m["Bell Labs"] = Vertex{
-      40.68433, 74.39967,
-   }
-   n := map[string]Vertex{
-      "Google": Vertex{
-         37.42202, -122.08408,
-      },
-   }
-  
-   fmt.Println(m);
-   fmt.Println(n);
-   fmt.Println(m["Bell Labs"])
+   fmt.Println(m)
+
+   // Add
+   m["Softek"] = Vertex{ 38.967734, -94.63784}
+   fmt.Println(m)
+
+   delete(m, "Softek")
+   fmt.Println(m)
+
+   _, ok := m["Softek"]
+   fmt.Println("Softek Present?", ok)
 }
