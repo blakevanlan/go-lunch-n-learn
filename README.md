@@ -30,7 +30,7 @@ Go Lunch 'n Learn example code
 ## Loops and Conditions
 
 ### If Statements
-* No _( )_ and _{ }_ are required
+* No *( )* and *{ }* are required
 * Can start with short statement before the execution of condition
 * Variables declared in the statement are only in scope until the end of the if block
 
