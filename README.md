@@ -30,13 +30,13 @@ Go Lunch 'n Learn example code
 ## Loops and Conditions
 
 ### If Statements
-* No *( )* and *{ }* are required
+* No **( )** and **{ }** are required
 * Can start with short statement before the execution of condition
 * Variables declared in the statement are only in scope until the end of the if block
 
 ### Switch Statements
 * Evaluates from top to bottom
-* Automatically breaks unless a case ends with a _fallthrough_ statement
+* Automatically breaks unless a case ends with a ```fallthrough``` statement
 * Switch statement without condition can be used for long if-then-else chains
 
 ## Data Structures
@@ -47,17 +47,59 @@ Go Lunch 'n Learn example code
 ### Structs
 * A collection of fields
 * Uses the dot accessor
-* _new(T)_ function allocates a zeroed struct and returns a pointer to it
+* ```new(T)``` function allocates a zeroed struct and returns a pointer to it
 
 ### Slices
 * Points to an array of values
-* _len(s)_ is used to get the length of a slice
+* ```len(s)``` is used to get the length of a slice
 * Can be re-sliced, creating a new slice value that points to the same array
-   * expression: _s[lo:lo]_
-   * evaluates from _lo_ through _hi-1_, inclusive
-   * _s[lo:lo]_ is empty and _s[lo:lo+1]_ has one element
-* Slices are created with the _make_ function
-* _cap(s)_ is used to get the capacity of a slice
+   * expression: ```s[lo:lo]```
+   * evaluates from ```lo``` through ```hi-1```, inclusive
+   * ```s[lo:lo]``` is empty and ```s[lo:lo+1]``` has one element
+* Slices are created with the ```make()``` function
+* ```cap(s)``` is used to get the capacity of a slice
 
 ### Maps
 * Key value pair structure
+* Can be created with ```make()```
+* ```delete()``` is used to remove an object from a map
+* A loopup returns two parameters, the value (if any) and a boolean indicating if the element exists in the map
+
+## Closures
+* Work just like closures in JavaScript
+
+## Methods and Interfaces
+
+### Methods
+* Go does not have classes
+* Methods can be attached to structs
+* The *method receiver* appears between ```func``` and the method name
+* The method receiver should be a pointer to the type, this allows the method to modify properties of the type
+
+### Interfaces
+* Interface type is defined as a set of methods
+* A value of interface type can hold any value that implements those methods
+* Allows for increased decoupling
+
+## Concurrent Programming
+
+### Goroutines
+* Lightweight thread, managed by Go runtime
+* ```go``` is the keyword used to start a new goroutine
+
+### Channels
+* Typed conduit through which you can send and receive values with the channel operator, ```<-```
+* Must be created before use
+* By default, sends and receives block until the other side is ready. This allows goroutines to synchronize without explicit locks or condition variables
+* Can be buffered, provide buffer amount as the second argument to ```make```
+* Sends to a buffered channel block only when the buffer is full. Receives block when the buffer is empty.
+
+### Range and Close
+* A sender can close a channel to indicate that no more values with be sent
+* A receiver can check if a channel is open by utilizing the second return value
+* A range loop can be used to receive values until the channel is closed
+
+### Select blocks
+* A select block blocks until one of its cases can run, then it executes that case. It chooses one at random if multiple are ready.
+* ```default``` can be used to create a non-blocking pattern
+
