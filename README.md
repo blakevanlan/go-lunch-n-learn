@@ -1,4 +1,4 @@
-go-lunch-n-learn
+Go Go?
 ================
 
 Go Lunch 'n Learn example code 
