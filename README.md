@@ -7,25 +7,25 @@ Go Lunch 'n Learn example code
 
 ### Packages
 * All Go programs are made up of packages
-* Programs start running in package _main_
-* _import_ is used to import other packages
+* Programs start running in package ```main```
+* ```import``` is used to import other packages
 
 ### Exported Names
 * After importing you can refer to the name a package exports
 * Go exports anything that begins with a capital letter
 
 ### Variables
-* Declare with either _var_ or _:=_ (:= can only be used inside functions)
+* Declare with either ```var``` or ```:=``` (```:=``` can only be used inside functions)
 * Type is declared after variable name
 * If initializer is present, type can be ommitted
-* _:=_ uses implicity typing
+* ```:=``` uses implicity typing
 * Constants can be a character, string, boolean, or a numeric value
 
 ### Functions
 * Return value type always comes after parameter list
 * When consecutive parameters share a type it can be shortened
 * Functions can return any number of results
-* Go functions can return _result parameters_ that act as normal variables while inside the function and return their current value on _return_
+* Go functions can return **result parameters** that act as normal variables while inside the function and return their current value on ```return```
 
 ## Loops and Conditions
 
