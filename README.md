@@ -34,6 +34,11 @@ Go Lunch 'n Learn example code
 * Can start with short statement before the execution of condition
 * Variables declared in the statement are only in scope until the end of the if block
 
+### For loop
+* Go only has a `for` loop
+* As with C, the pre and post statements can be empty and then no `;` are required
+* For an infinite loop the keyword `for` can just be used
+
 ### Switch Statements
 * Evaluates from top to bottom
 * Automatically breaks unless a case ends with a ```fallthrough``` statement
