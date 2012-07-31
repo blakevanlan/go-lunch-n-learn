@@ -1,7 +1,9 @@
 Go Go?
 ================
 
-Go Lunch 'n Learn example code 
+Go Lunch 'n Learn example code. Most of the code is taken from http://tour.golang.org.
+
+Anything that is not covered in this lunch 'n learn can likely be found here: http://golang.org/doc/effective_go.html
 
 ## Interesting Aspects
 * Go is built has a concurrent, garbage-collected language with fast compilation. Large applications should compile in a few seconds on a single machine.
