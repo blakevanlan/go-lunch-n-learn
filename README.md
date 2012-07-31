@@ -4,9 +4,9 @@ Go Go?
 Go Lunch 'n Learn example code 
 
 ## Interesting Aspects
-* Go does not have exceptions because the designers believe them to be cumbersome. Instead Go has [Defer, Panic, and Recover](http://golang.org/doc/articles/defer_panic_recover.html).
 * Go is built has a concurrent, garbage-collected language with fast compilation. Large applications should compile in a few seconds on a single machine.
 * When compiling, unused variables and imports are considered errors and stop compilation.
+* Go does not have exceptions because the designers believe them to be cumbersome. Instead Go has [Defer, Panic, and Recover](http://golang.org/doc/articles/defer_panic_recover.html).
 
 ## Hello World
 
